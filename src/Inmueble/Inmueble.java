@@ -45,7 +45,7 @@ public abstract class Inmueble {
         return necesitaMantenimiento;
     }
     
-    public void actualizarAlicuota(MOVIMIENTO_FINANCIERO mov_financiero){
-        alicuota=mov_financiero.calcularAlicuota();
-    }
+//    public void actualizarAlicuota(MOVIMIENTO_FINANCIERO mov_financiero){
+//        alicuota=mov_financiero.calcularAlicuota();
+//    }
 }

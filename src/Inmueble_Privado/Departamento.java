@@ -13,5 +13,9 @@ public class Departamento extends InmueblePrivado {
     public String getIdDepartamento() {
         return idDepartamento;
     }
+
+    public void setIdDepartamento(String idDepartamento) {
+        this.idDepartamento = idDepartamento;
+    }
     
 }

@@ -10,8 +10,6 @@ public class ParqueaderoPrivado extends InmueblePrivado {
         this.idParqueadero = idParqueadero;
     }
 
-
-
     public String getIdParqueadero() {
         return idParqueadero;
     }

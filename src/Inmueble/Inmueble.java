@@ -1,6 +1,5 @@
-
 package Inmueble;
-
+// Commit
 public abstract class Inmueble {
     double metros_cuadrados;
     boolean necesitaMantenimiento;

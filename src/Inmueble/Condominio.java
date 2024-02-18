@@ -1,5 +1,7 @@
 package Inmueble;
 
+import Inmueble_Privado.Departamento;
+import Inmueble_Privado.ParqueaderoPrivado;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -30,17 +32,40 @@ public class Condominio extends Inmueble{
     public void crearCondominio(String nombreArchivo) {
         try (BufferedReader br = new BufferedReader(new FileReader(nombreArchivo))) {
             String line;
+            
             while ((line = br.readLine()) != null) {
+                Inmueble inmueble = new Inmueble() {
+                };
+
                 String[] parts = line.split(",");
                 double metrosC = Double.parseDouble(parts[0]);
                 String ubicacionI = parts[1];
                 boolean mantenimiento = Boolean.parseBoolean(parts[2]);
                 double valorAlicuota = Double.parseDouble(parts[3]);
-                String cedula = parts[4]; // Obtener la cédula
-                String nombre = parts[5]; // Obtener el nombre
-                String predio = parts[6]; // Obtener el predio
+                String cedula = parts[4];
+                String nombre = parts[5];
+                String predio = parts[6];
                 TituloPropiedad tituloPropiedadI = new TituloPropiedad(cedula, nombre, predio);
-                Inmueble inmueble = new Inmueble(metrosC, ubicacionI, mantenimiento, valorAlicuota, tituloPropiedadI) {};
+
+                if (parts[7] != null && parts[8] != null) {
+                    boolean disponibilidadReserva = Boolean.parseBoolean(parts[7]);
+                    int aforo = Integer.parseInt(parts[8]);
+                    Inmueble inmueblePublico = new Inmueble(metrosC, ubicacionI, mantenimiento, valorAlicuota, tituloPropiedadI) {
+                    };
+                    inmueble = inmueblePublico;
+                } else {
+                    if (parts[10] != null) {
+                        String id_Departamento = parts[9];
+                        Inmueble_Privado.Departamento departamento = new Departamento(id_Departamento, metrosC, ubicacionI, mantenimiento, valorAlicuota, tituloPropiedadI);
+                        inmueble = departamento;
+                    }
+                    if (parts[10] != null) {
+                        String id_Parqueadero = parts[10];
+                        Inmueble_Privado.ParqueaderoPrivado parqueaderoP = new ParqueaderoPrivado(id_Parqueadero, metrosC, ubicacionI, mantenimiento, valorAlicuota, tituloPropiedadI);
+                        inmueble = parqueaderoP;
+                    }
+                }
+                
                 agregarInmueble(inmueble);
             }
         } catch (IOException e) {

@@ -60,4 +60,5 @@ public abstract class Inmueble {
     public void setTituloPropiedad(TituloPropiedad tituloPropiedad) {
         this.tituloPropiedad = tituloPropiedad;
     }
+    
 }

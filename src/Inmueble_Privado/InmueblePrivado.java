@@ -1,4 +1,6 @@
-package Inmueble;
+package Inmueble_Privado;
+import Inmueble.Inmueble;
+
 public abstract class InmueblePrivado extends Inmueble{
 
     protected double dimensiones;

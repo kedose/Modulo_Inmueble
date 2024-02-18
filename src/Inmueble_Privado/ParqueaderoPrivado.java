@@ -1,4 +1,5 @@
-package Inmueble;
+package Inmueble_Privado;
+
 public class ParqueaderoPrivado extends InmueblePrivado {
 
 

@@ -1,5 +1,5 @@
 package Inmueble;
-// Importaciones
+
 public abstract class Inmueble {
     double metros_cuadrados;
     boolean necesitaMantenimiento;

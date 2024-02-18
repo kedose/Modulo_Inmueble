@@ -2,24 +2,33 @@ package Inmueble;
 
 public abstract class Inmueble {
     double metrosCuadrados;
+    String ubicacion;
     boolean necesitaMantenimiento;
     double alicuota;
+    TituloPropiedad tituloPropiedad;
 
 // Constructor vacío
     public Inmueble() {
     }
 
 // Constructor con parámetros  
-    public Inmueble(double metrosCuadrados, boolean necesitaMantenimiento, double alicuota) {
+    public Inmueble(double metrosCuadrados, String ubicacion, boolean necesitaMantenimiento, double alicuota, TituloPropiedad tituloPropiedad) {
         this.metrosCuadrados = metrosCuadrados;
+        this.ubicacion = ubicacion;
         this.necesitaMantenimiento = necesitaMantenimiento;
         this.alicuota = alicuota;
+        this.tituloPropiedad = tituloPropiedad;
     }
+
 // Getters y Setters
     public double getMetrosCuadrados() {
         return metrosCuadrados;
     }
-    
+
+    public String getUbicacion() {
+        return ubicacion;
+    }
+
     public boolean isNecesitaMantenimiento() {
         return necesitaMantenimiento;
     }
@@ -28,8 +37,16 @@ public abstract class Inmueble {
         return alicuota;
     }
 
+    public TituloPropiedad getTituloPropiedad() {
+        return tituloPropiedad;
+    }
+
     public void setMetrosCuadrados(double metros_cuadrados) {
         this.metrosCuadrados = metros_cuadrados;
+    }
+
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
     }
 
     public void setNecesitaMantenimiento(boolean necesitaMantenimiento) {
@@ -40,12 +57,7 @@ public abstract class Inmueble {
         this.alicuota = alicuota;
     }
 
-// Métodos
-    public boolean consultarMantenimiento(){
-        return necesitaMantenimiento;
+    public void setTituloPropiedad(TituloPropiedad tituloPropiedad) {
+        this.tituloPropiedad = tituloPropiedad;
     }
-    
-//    public void actualizarAlicuota(MOVIMIENTO_FINANCIERO mov_financiero){
-//        alicuota=mov_financiero.calcularAlicuota();
-//    }
 }

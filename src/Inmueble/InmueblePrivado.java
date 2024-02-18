@@ -1,4 +1,5 @@
-public abstract class InmueblePrivado {
+package Inmueble;
+public abstract class InmueblePrivado extends Inmueble{
 
     protected double dimensiones;
     protected String ubicacion;

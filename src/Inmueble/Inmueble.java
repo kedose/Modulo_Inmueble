@@ -1,7 +1,7 @@
 package Inmueble;
 
 public abstract class Inmueble {
-    double metros_cuadrados;
+    double metrosCuadrados;
     boolean necesitaMantenimiento;
     double alicuota;
 
@@ -10,14 +10,14 @@ public abstract class Inmueble {
     }
 
 // Constructor con parámetros  
-    public Inmueble(double metros_cuadrados, boolean necesitaMantenimiento, double alicuota) {
-        this.metros_cuadrados = metros_cuadrados;
+    public Inmueble(double metrosCuadrados, boolean necesitaMantenimiento, double alicuota) {
+        this.metrosCuadrados = metrosCuadrados;
         this.necesitaMantenimiento = necesitaMantenimiento;
         this.alicuota = alicuota;
     }
 // Getters y Setters
-    public double getMetros_cuadrados() {
-        return metros_cuadrados;
+    public double getMetrosCuadrados() {
+        return metrosCuadrados;
     }
     
     public boolean isNecesitaMantenimiento() {
@@ -28,8 +28,8 @@ public abstract class Inmueble {
         return alicuota;
     }
 
-    public void setMetros_cuadrados(double metros_cuadrados) {
-        this.metros_cuadrados = metros_cuadrados;
+    public void setMetrosCuadrados(double metros_cuadrados) {
+        this.metrosCuadrados = metros_cuadrados;
     }
 
     public void setNecesitaMantenimiento(boolean necesitaMantenimiento) {

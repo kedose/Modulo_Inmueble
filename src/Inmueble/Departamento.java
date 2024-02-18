@@ -1,3 +1,4 @@
+package Inmueble;
 public class Departamento extends InmueblePrivado {
 
 

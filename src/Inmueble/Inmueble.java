@@ -1,6 +1,6 @@
 
 package Inmueble;
-//hola
+//
 public abstract class Inmueble {
     double metros_cuadrados;
     boolean necesitaMantenimiento;

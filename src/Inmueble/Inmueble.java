@@ -1,6 +1,7 @@
 package Inmueble;
 
 public abstract class Inmueble {
+    String tipo;
     double metrosCuadrados;
     String ubicacion;
     boolean necesitaMantenimiento;
@@ -12,7 +13,8 @@ public abstract class Inmueble {
     }
 
 // Constructor con parámetros  
-    public Inmueble(double metrosCuadrados, String ubicacion, boolean necesitaMantenimiento, double alicuota, TituloPropiedad tituloPropiedad) {
+    public Inmueble(String tipo, double metrosCuadrados, String ubicacion, boolean necesitaMantenimiento, double alicuota, TituloPropiedad tituloPropiedad) {
+        this.tipo = tipo;
         this.metrosCuadrados = metrosCuadrados;
         this.ubicacion = ubicacion;
         this.necesitaMantenimiento = necesitaMantenimiento;
@@ -20,7 +22,11 @@ public abstract class Inmueble {
         this.tituloPropiedad = tituloPropiedad;
     }
 
-// Getters y Setters
+// Getters y Setters 
+    public String getTipo() {
+        return tipo;
+    }
+
     public double getMetrosCuadrados() {
         return metrosCuadrados;
     }
@@ -39,6 +45,10 @@ public abstract class Inmueble {
 
     public TituloPropiedad getTituloPropiedad() {
         return tituloPropiedad;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
     public void setMetrosCuadrados(double metros_cuadrados) {

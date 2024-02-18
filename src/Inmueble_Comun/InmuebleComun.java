@@ -7,8 +7,8 @@ public abstract class InmuebleComun extends Inmueble{
     boolean disponible;
     int capacidad;
 
-    public InmuebleComun(boolean disponible, int capacidad, double metrosCuadrados, String ubicacion, boolean necesitaMantenimiento, double alicuota, TituloPropiedad tituloPropiedad) {
-        super(metrosCuadrados, ubicacion, necesitaMantenimiento, alicuota, tituloPropiedad);
+    public InmuebleComun(boolean disponible, int capacidad, String tipo, double metrosCuadrados, String ubicacion, boolean necesitaMantenimiento, double alicuota, TituloPropiedad tituloPropiedad) {
+        super(tipo, metrosCuadrados, ubicacion, necesitaMantenimiento, alicuota, tituloPropiedad);
         this.disponible = disponible;
         this.capacidad = capacidad;
     }

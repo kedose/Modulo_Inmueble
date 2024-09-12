@@ -1,25 +1,40 @@
 package Inmueble;
 
 public abstract class Inmueble {
-    double metros_cuadrados;
+    String tipo;
+    double metrosCuadrados;
+    String ubicacion;
     boolean necesitaMantenimiento;
     double alicuota;
+    TituloPropiedad tituloPropiedad;
 
 // Constructor vacío
     public Inmueble() {
     }
 
 // Constructor con parámetros  
-    public Inmueble(double metros_cuadrados, boolean necesitaMantenimiento, double alicuota) {
-        this.metros_cuadrados = metros_cuadrados;
+    public Inmueble(String tipo, double metrosCuadrados, String ubicacion, boolean necesitaMantenimiento, double alicuota, TituloPropiedad tituloPropiedad) {
+        this.tipo = tipo;
+        this.metrosCuadrados = metrosCuadrados;
+        this.ubicacion = ubicacion;
         this.necesitaMantenimiento = necesitaMantenimiento;
         this.alicuota = alicuota;
+        this.tituloPropiedad = tituloPropiedad;
     }
-// Getters y Setters
-    public double getMetros_cuadrados() {
-        return metros_cuadrados;
+
+// Getters y Setters 
+    public String getTipo() {
+        return tipo;
     }
-    
+
+    public double getMetrosCuadrados() {
+        return metrosCuadrados;
+    }
+
+    public String getUbicacion() {
+        return ubicacion;
+    }
+
     public boolean isNecesitaMantenimiento() {
         return necesitaMantenimiento;
     }
@@ -28,8 +43,20 @@ public abstract class Inmueble {
         return alicuota;
     }
 
-    public void setMetros_cuadrados(double metros_cuadrados) {
-        this.metros_cuadrados = metros_cuadrados;
+    public TituloPropiedad getTituloPropiedad() {
+        return tituloPropiedad;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public void setMetrosCuadrados(double metros_cuadrados) {
+        this.metrosCuadrados = metros_cuadrados;
+    }
+
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
     }
 
     public void setNecesitaMantenimiento(boolean necesitaMantenimiento) {
@@ -40,12 +67,8 @@ public abstract class Inmueble {
         this.alicuota = alicuota;
     }
 
-// Métodos
-    public boolean consultarMantenimiento(){
-        return necesitaMantenimiento;
+    public void setTituloPropiedad(TituloPropiedad tituloPropiedad) {
+        this.tituloPropiedad = tituloPropiedad;
     }
     
-    public void actualizarAlicuota(MOVIMIENTO_FINANCIERO mov_financiero){
-        alicuota=mov_financiero.calcularAlicuota();
-    }
 }
